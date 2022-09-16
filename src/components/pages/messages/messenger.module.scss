@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+.messenger_container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
+  height: calc(100vh - 70px);
+  width: 70vw;
+}
+
+.users_container {
+  border-right: 2px solid #244d61;
+  overflow-y: auto;
+}
+
+.dialog_item_wrapper {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 2px solid #244d61;
+  border-radius: 16px;
+  opacity: 0.7;
+}
+
+.selected_user {
+  opacity: 1;
+}
+
+.dialog_item_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog_item_details {
+  display: flex;
+  align-items: center;
+}
+
+.dialog_item_avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.messages_container {
+  position: relative;
+  width: 80%;
+}
+
+.messages_user {
+  padding: 10px;
+  text-align: center;
+}
+
+.message_form {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+
+  & input {
+    width: 40vw;
+    margin: 0 10px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #5689c0;
+  }
+
+  & .btn {
+    margin-top: -10px;
+  }
+}
+
+.messages {
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+  border-bottom: 1px solid var(--color-6);
+}
+
+.message_wrapper {
+  margin-top: 5px;
+  padding: 0 5px;
+  max-width: 50%;
+
+  & p {
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    border-radius: 5px;
+  }
+
+  & small {
+    display: inline-block;
+    opacity: 0.8;
+  }
+
+  & .own {
+    text-align: right;
+  }
+}
+
+.me {
+  background: #5689c0;
+}
+.friend {
+  background: #eaebed;
+  border: 2px solid #5689c0;
+}
+
+.truncate {
+  font-size: 14px;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  & strong {
+    margin-right: 10px;
+  }
+}
+
+.unread {
+  margin-left: 10px;
+  background: #5689c0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 920px) {
+  .dialog_item_details {
+    flex-direction: column;
+  }
+
+  .messages_container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dialog_item_details {
+    max-width: 100%;
+  }
+
+  .message_form {
+    .btn {
+      display: none;
+    }
+  }
+}

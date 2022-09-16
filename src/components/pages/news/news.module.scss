@@ -1,0 +1,9 @@
+.newsCard {
+  width: 60%;
+}
+
+@media screen and (max-width: 480px){
+  .newsCard {
+    width: 100%;
+  }
+}

@@ -1,0 +1,106 @@
+html, body{
+  background: #f1f1f1;
+  height: 100%;
+}
+
+$firstColor: #244d61;
+$secondColor: #eaebed;
+$thirdColor: #5689c0;
+
+.main {
+  margin-top: 5rem;
+}
+
+.card{
+  max-width: 550px;
+}
+.avatar{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid #eaebed;
+}
+
+.user-header {
+  border-radius: 16px 16px 0 0;
+  height: 250px;
+  padding: 1rem;
+}
+.user-header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  min-height: 50px;
+  padding: 1rem 2rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: transparent;
+  color: #eaebed;
+  margin-top: 3rem;
+}
+
+.leftSide {
+  position: sticky;
+  top: 5rem;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: #eaebed;
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+.image-drop-area {
+  width: 120px;
+  height: 50px;
+  border: 5px dashed #244d61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+
+  & > input {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: transparent;
+    height: 50px;
+    width: 120px;
+  }
+
+  & > input::-webkit-file-upload-button {
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 120px;
+    color: transparent;
+  }
+  & > input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .leftSide {
+    width: 100%;
+  }
+
+  .user-header-bottom {
+    flex-direction: column;
+  }
+}

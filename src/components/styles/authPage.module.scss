@@ -1,0 +1,18 @@
+.authBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .authForm {
+    border: 2px solid #244d61;
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .authBox * {
+    max-width: 100%;
+  }
+}

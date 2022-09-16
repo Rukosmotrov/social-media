@@ -1,0 +1,62 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  top: 0;
+
+  & .wrapper {
+    width: 65%;
+    background-color: #1a3645;
+    border-radius: 16px;
+    position: relative;
+    padding: 5px;
+  }
+  & .wrapper > input{
+    background: transparent;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    color: #eaebed;
+    text-align: center;
+    width: 100%;
+  }
+  & .wrapper > input::placeholder{
+    opacity: .6;
+    color:#eaebed;
+  }
+  & .wrapper > svg{
+    opacity: .6;
+    position: absolute;
+    top:5px;
+    left: 5%;
+  }
+
+  & .wrapper > .searchField {
+    width: calc(100% - 30px);
+    position: absolute;
+    margin-top: 1rem;
+    padding: 10px;
+    min-height: 100px;
+    max-height: 600px;
+    background-color: #eaebed;
+    border-radius: 16px;
+    color: #171717;
+  }
+}
+
+.searchedUser {
+  width: 200px;
+  height: 70px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.logo {
+  margin-right: 2em;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    display: none !important;
+  }
+}
